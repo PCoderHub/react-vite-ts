@@ -48,7 +48,7 @@ function Departments() {
   return (
     <div>
       {departments !== undefined ? departments.map((item) => 
-      <Box sx={{width: '50%', mt: 1, margin: 'auto'}}>
+      <Box sx={{width: '60%', mt: 1, margin: 'auto'}}>
       <Box>
         <IconButton onClick={() => handleCollapse(item.department)} size='small'>{expanded[item.department] ? <AddIcon/> : <RemoveIcon/>}</IconButton>
         <FormControlLabel label={item.department} control={

@@ -4,6 +4,7 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 import Departments from "./Departments";
 import Logout from "./Logout";
+import './Table.css';
 
 function Table() {
 
@@ -49,12 +50,16 @@ function Table() {
   }, []);
 
   return (
-    <div >
-      <Box sx={{width: '60%', height: 400, margin: 'auto'}}>
-        <DataGrid rows={rows} columns={columns} />
-      </Box>
-      <Departments/>
-      <Logout/>
+    <div className="second-page">
+      <div>
+        <Box sx={{width: '100%', height: 400, margin: 'auto'}}>
+          <DataGrid rows={rows} columns={columns} />
+        </Box>
+        <Departments/>
+      </div>
+      <div className="logout">
+        <Logout/>
+      </div>
     </div>
   )
 }
